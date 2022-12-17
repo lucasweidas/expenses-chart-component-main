@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+.balance {
+  .card__wrapper {
+    row-gap: rem(10);
+
+    @include breakpoint(medium) {
+      row-gap: rem(14);
+    }
+  }
+
+  .logo {
+    width: rem(60);
+
+    @include breakpoint(medium) {
+      width: rem(72);
+      height: rem(48);
+    }
+  }
+}

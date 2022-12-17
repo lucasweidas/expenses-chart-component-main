@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.card {
+  width: min(100% - rem(32), rem(540));
+  display: flex;
+  border-radius: rem(10);
+
+  @include breakpoint(medium) {
+    border-radius: rem(20);
+  }
+
+  &--balance {
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(16);
+    padding: rem(24) rem(22);
+    background-color: var(--color-soft-red);
+
+    @include breakpoint(medium) {
+      padding: rem(30) rem(34);
+    }
+  }
+
+  &--summary {
+    flex-direction: column;
+    row-gap: rem(16);
+    padding: rem(28) rem(20);
+    background-color: var(--color-pale-orange);
+
+    @include breakpoint(medium) {
+      row-gap: rem(16);
+      padding: rem(40) rem(36);
+    }
+  }
+}

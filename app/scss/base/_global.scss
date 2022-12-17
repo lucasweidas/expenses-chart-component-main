@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+:root {
+  --chart-border-radius: 4;
+  --layout-padding-top: 22;
+  --font-size-chart: 14;
+
+  @include breakpoint(medium) {
+    --chart-border-radius: 6;
+    --layout-padding-top: 28;
+    --font-size-chart: 16;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+main {
+  min-height: inherit;
+  row-gap: rem(16);
+  justify-content: center;
+  align-items: center;
+  padding-block: rem(64);
+
+  @include breakpoint(medium) {
+    row-gap: rem(24);
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

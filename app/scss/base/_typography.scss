@@ -1,0 +1,65 @@
+@use '../abstracts/' as *;
+
+:root {
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-size-2: #{rem(15)};
+  --font-size-3: #{rem(24)};
+  --font-size-4: #{rem(30)};
+
+  @include breakpoint(medium) {
+    --font-size-2: #{rem(18)};
+    --font-size-3: #{rem(32)};
+    --font-size-4: #{rem(46)};
+  }
+}
+
+body {
+  font-family: var(--font-dm-sans);
+}
+
+.headline-1 {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+  color: var(--color-pale-orange);
+}
+
+.headline-2 {
+  font-size: var(--font-size-3);
+  font-weight: 700;
+  color: var(--color-dark-brown);
+}
+
+.headline-3 {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+  color: var(--color-medium-brown);
+}
+
+.text {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+
+  &--700 {
+    font-weight: 700;
+  }
+
+  &--lg {
+    font-size: var(--font-size-3);
+  }
+
+  &--xl {
+    font-size: var(--font-size-4);
+  }
+
+  &--light {
+    color: var(--color-pale-orange);
+  }
+
+  &--dark {
+    color: var(--color-dark-brown);
+  }
+
+  &--gray {
+    color: var(--color-medium-brown);
+  }
+}

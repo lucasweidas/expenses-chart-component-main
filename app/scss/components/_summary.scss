@@ -1,0 +1,47 @@
+@use '../abstracts/' as *;
+
+.summary {
+  .chart {
+    width: 100%;
+    height: rem(246);
+    position: relative;
+
+    @include breakpoint-down(xsmall) {
+      height: rem(206);
+    }
+  }
+
+  &__month {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-block-start: rem(28);
+    border-block-start: rem(2) solid var(--color-cream);
+
+    @include breakpoint-down(xsmall) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      row-gap: rem(16);
+    }
+
+    @include breakpoint(medium) {
+      padding-block-start: rem(34);
+    }
+
+    .card__wrapper {
+      &:first-of-type {
+        row-gap: rem(8);
+      }
+
+      &:last-of-type {
+        align-items: flex-end;
+        row-gap: rem(4);
+
+        @include breakpoint-down(xsmall) {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

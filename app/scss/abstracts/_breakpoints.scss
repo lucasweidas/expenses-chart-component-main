@@ -1,0 +1,17 @@
+@use 'functions' as *;
+
+$breakpoints-up: (
+  'xsmall': em(320),
+  'small': em(425),
+  'medium': em(600),
+  'large': em(1024),
+  'xlarge': em(1440),
+);
+
+$breakpoints-down: (
+  'xsmall': em(319.98),
+  'small': em(424.98),
+  'medium': em(599.98),
+  'large': em(1023.98),
+  'xlarge': em(1439.98),
+);
